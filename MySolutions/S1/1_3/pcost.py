@@ -4,7 +4,7 @@ with open("../../Data/portfolio.dat") as f:
     for line in f:
         data = line.split(" ")
         stock_name = data[0]
-        stock_count = float(data[1])
+        stock_count = int(data[1])
         stock_price = float(data[2])
         local_stock_total = stock_count * stock_price
         print(f"{stock_name}: {local_stock_total:>10.2f}")
